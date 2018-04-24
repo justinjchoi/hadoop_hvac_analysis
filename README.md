@@ -31,6 +31,7 @@ you want) -- i.e., change this line: “export JAVA_HOME = $(JAVA_HOME)” to: �
 
 Part 3: Configure Hadoop to run “pseudo-distributed”
 
+
 Part 4: Initialize and boot Hadoop
 
 17. cd hadoop-2.7.5
