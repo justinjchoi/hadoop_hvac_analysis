@@ -1,8 +1,8 @@
-First Hands-on experience with Hadoop (MapReduce Paradigm) using Python on Amazon AWS 
+### First Hands-on experience with Hadoop (MapReduce Paradigm) using Python on Amazon AWS 
 
-By following the example below, you can run the code by typing on the command:
+By following the example below, you can run the code by typing on the command line:
 
-cat HVAC.csv | ./HVACmapper.py | sort -k1,1 | ./HVACreducer.py
+`cat HVAC.csv | ./HVACmapper.py | sort -k1,1 | ./HVACreducer.py`
 
 Below is an example you can follow how hadoop works: 
 
