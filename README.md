@@ -31,6 +31,49 @@ you want) -- i.e., change this line: “export JAVA_HOME = $(JAVA_HOME)” to: �
 
 Part 3: Configure Hadoop to run “pseudo-distributed”
 
+13. Edit hadoop-2.7.5/etc/hadoop/core-site.xml to be:
+
+```html
+<configuration>
+  <property>
+    <name> fs.defaultFS</name>
+    <value>hdfs://localhost:9000</value>
+  </property>
+<configuration>
+```
+
+14. Edit hadoop-2.7.5/etc/hadoop/hdfs-site.xml to be:
+
+```html
+<configuration>
+ <property>
+ <name>dfs.replication</name>
+ <value>1</value>
+ </property>
+</configuration>
+```
+
+15. Create hadoop-2.7.5/etc/hadoop/mapred-site.xml to be:
+
+```html
+<configuration>
+ <property>
+ <name>mapreduce.framework.name</name>
+ <value>yarn</value>
+ </property>
+</configuration>
+```
+
+16. Edit hadoop-2.7.5/etc/hadoop/yarn-site.xml to be:
+
+```html
+<configuration>
+ <property>
+ <name>yarn.nodemanager.aux-services</name>
+ <value>mapreduce_shuffle</value>
+ </property>
+</configuration>
+```
 
 Part 4: Initialize and boot Hadoop
 
