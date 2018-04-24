@@ -25,14 +25,12 @@ Part 3: Configure Hadoop to run “pseudo-distributed”
 
 13. Edit hadoop-2.7.5/etc/hadoop/core-site.xml to be:
 
-'
 <configuration>
  <property>
  <name>fs.defaultFS</name>
  <value>hdfs://localhost:9000</value>
  </property>
 </configuration>
-'
 
 14. Edit hadoop-2.7.5/etc/hadoop/hdfs-site.xml to be:
 
